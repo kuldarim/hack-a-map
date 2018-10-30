@@ -55,9 +55,9 @@ body {
 .color-key {
   background: linear-gradient(
     to right,
-    hsl(0, 100%, 47%) 0%,
-    hsl(60, 92.5%, 47%) 50%,
-    hsl(120, 85%, 47%) 100%
+    hsl(0, 100%, 45%) 0%,
+    hsl(60, 92.5%, 45%) 50%,
+    hsl(120, 85%, 45%) 100%
   );
   flex: 1;
   -webkit-box-flex: 1;

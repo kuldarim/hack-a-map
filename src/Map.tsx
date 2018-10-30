@@ -57,12 +57,13 @@ const setStyle = (map: google.maps.Map, areas: any) => {
       ? Color()
         .hue(hue)
         .saturationl(100 - hue * 0.125)
-        .lightness(47)
-        .string()
-      : 'rgb(120, 120, 120)'
+        .lightness(45)
+
+      : Color('rgb(120, 120, 120)')
     return {
-      fillColor: color,
+      fillColor: color.string(),
       strokeWeight: 1,
+      strokeColor: color.darken(0.35).string(),
       fillOpacity: 0.75
     };
   });

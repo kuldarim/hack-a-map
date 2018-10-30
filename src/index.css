@@ -39,6 +39,7 @@ body {
   left: 110px;
   width: 360px;
   height: 28px;
+  display: none;
 }
 #data-box {
   bottom: 10px;

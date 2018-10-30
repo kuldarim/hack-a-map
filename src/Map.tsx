@@ -78,6 +78,8 @@ const mouseOver = (map: google.maps.Map, areas: any) => (e: any) => {
   console.log(areas[name]);
   console.log(greens, reds, yellows);
   const hue = areas[name].color;
+
+  (document.getElementById("controls") as HTMLElement).style.display = "block";
   (document.getElementById("data-label") as HTMLElement).textContent = name;
   (document.getElementById("data-caret") as HTMLElement).style.paddingLeft =
     (hue / 120) * 100 + "%";

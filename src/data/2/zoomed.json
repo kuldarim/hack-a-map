@@ -1,98 +1,590 @@
 {
-  "Silkeborg Kommune": 93.10030395136778,
-  "Rebild Kommune": 109.6103896103896,
-  "Odsherred Kommune": 106.19095477386935,
-  "Hillerød Kommune": 82.37903225806451,
-  "Halsnæs Kommune": 98.08695652173913,
-  "Esbjerg Kommune": 97.07174231332357,
-  "Kerteminde Kommune": 94.5679012345679,
-  "Køge Kommune": 58.75,
-  "Gribskov Kommune": 84.03726708074534,
-  "Fredensborg Kommune": 56.68604651162791,
-  "Solrød Kommune": 51.60493827160494,
-  "Skive Kommune": 115.76243980738363,
-  "Allerød Kommune": 62.34875444839858,
-  "Læsø Kommune": 113.80952380952381,
-  "Thisted Kommune": 111.55606407322655,
-  "Lolland Kommune": 113.97228637413394,
-  "Sorø Kommune": 101.42857142857143,
-  "Lejre Kommune": 66.35838150289017,
-  "Stevns Kommune": 91.97969543147208,
-  "Hedensted Kommune": 98.89418493803622,
-  "Svendborg Kommune": 84.77558348294434,
-  "Vallensbæk Kommune": 69.0909090909091,
-  "Rudersdal Kommune": 33.83606557377049,
-  "Dragør Kommune": 35.70552147239264,
-  "Gladsaxe Kommune": 64,
-  "Vordingborg Kommune": 105.3913043478261,
-  "Gentofte Kommune": 44.81707317073171,
-  "Ringkøbing-Skjern Kommune": 109.48948948948949,
-  "Norddjurs Kommune": 114.10194174757281,
-  "Slagelse Kommune": 101.86813186813187,
-  "Vejle Kommune": 96.44646924829158,
-  "Samsø Kommune": 104.86486486486487,
-  "Brøndby Kommune": 49.56521739130435,
-  "Egedal Kommune": 63.77622377622377,
-  "Assens Kommune": 105.26785714285714,
-  "Tønder Kommune": 116.64536741214057,
-  "Langeland Kommune": 110.78891257995735,
-  "Favrskov Kommune": 98.32335329341318,
-  "Horsens Kommune": 94.01869158878505,
-  "Næstved Kommune": 97.23529411764706,
-  "Middelfart Kommune": 97.80701754385964,
-  "Frederikssund Kommune": 110.32835820895522,
-  "Greve Kommune": 54.375,
-  "Ærø Kommune": 114.44444444444444,
-  "Ringsted Kommune": 74.33628318584071,
-  "Herning Kommune": 107.3015873015873,
-  "Aalborg Kommune": 94.50336071695295,
-  "Kolding Kommune": 92,
-  "Frederiksberg Kommune": 68.91640866873065,
-  "Nordfyns Kommune": 103.56846473029046,
-  "Mariagerfjord Kommune": 114.92307692307692,
-  "Morsø Kommune": 111.9869706840391,
-  "Ishøj Kommune": 80.45454545454545,
-  "Lemvig Kommune": 115.56485355648536,
-  "Faaborg-Midtfyn Kommune": 103.77682403433477,
-  "Lyngby-Taarbæk Kommune": 30.205949656750573,
-  "Hørsholm Kommune": 32.054794520547944,
-  "Hjørring Kommune": 104.43983402489627,
-  "Aarhus Kommune": 70.4597177969959,
-  "Høje Taastrup Kommune": 87.75,
-  "Bornholms Regionskommune": 115.22123893805309,
-  "Fanø Kommune": 104.08163265306122,
-  "Struer Kommune": 105.09740259740259,
-  "Nyborg Kommune": 96.26865671641791,
-  "Billund Kommune": 109.9009900990099,
-  "Tårnby Kommune": 69.19354838709677,
-  "Randers Kommune": 97.1687429218573,
-  "Helsingør Kommune": 59.472527472527474,
-  "Haderslev Kommune": 104.78753541076487,
-  "Herlev Kommune": 61.06194690265487,
-  "Københavns Kommune": 60.02392344497608,
-  "Holstebro Kommune": 113.4841628959276,
-  "Skanderborg Kommune": 71.51919866444074,
-  "Frederikshavn Kommune": 99.06556141672947,
-  "Vesthimmerlands Kommune": 118.45018450184502,
-  "Kalundborg Kommune": 105.23195876288659,
-  "Viborg Kommune": 108.6848635235732,
-  "Hvidovre Kommune": 62.916666666666664,
-  "Varde Kommune": 104.05874499332444,
-  "Albertslund Kommune": 73.33333333333333,
-  "Aabenraa Kommune": 108.02371541501977,
-  "Fredericia Kommune": 91.09859154929578,
-  "Guldborgsund Kommune": 110.47701647875108,
-  "Sønderborg Kommune": 111.42857142857143,
-  "Ikast-Brande Kommune": 106.66666666666667,
-  "Faxe Kommune": 79.59183673469387,
-  "Vejen Kommune": 111.9493670886076,
-  "Brønderslev Kommune": 109.45945945945945,
-  "Holbæk Kommune": 88.72521246458923,
-  "Glostrup Kommune": 78.68852459016394,
-  "Ballerup Kommune": 68,
-  "Syddjurs Kommune": 98.58480749219562,
-  "Odder Kommune": 91.86335403726709,
-  "Odense Kommune": 77.53521126760563,
-  "Jammerbugt Kommune": 117.9595588235294,
-  "Roskilde Kommune": 69.4949494949495
+    "Hillerød Kommune": {
+        "color": 72.5,
+        "greens": 87,
+        "reds": 32,
+        "yellows": 145
+    },
+    "Halsnæs Kommune": {
+        "color": 104.77611940298507,
+        "greens": 262,
+        "reds": 12,
+        "yellows": 61
+    },
+    "Esbjerg Kommune": {
+        "color": 96.32530120481928,
+        "greens": 433,
+        "reds": 31,
+        "yellows": 200
+    },
+    "Kerteminde Kommune": {
+        "color": 94.5679012345679,
+        "greens": 147,
+        "reds": 7,
+        "yellows": 89
+    },
+    "Skive Kommune": {
+        "color": 115.77049180327869,
+        "greens": 569,
+        "reds": 2,
+        "yellows": 39
+    },
+    "Læsø Kommune": {
+        "color": 113.76,
+        "greens": 113,
+        "reds": 1,
+        "yellows": 11
+    },
+    "Lolland Kommune": {
+        "color": 113.93654524089307,
+        "greens": 770,
+        "reds": 5,
+        "yellows": 76
+    },
+    "Stevns Kommune": {
+        "color": 83.2183908045977,
+        "greens": 125,
+        "reds": 24,
+        "yellows": 112
+    },
+    "Svendborg Kommune": {
+        "color": 85.728,
+        "greens": 322,
+        "reds": 54,
+        "yellows": 249
+    },
+    "Vallensbæk Kommune": {
+        "color": 69.23076923076923,
+        "greens": 22,
+        "reds": 12,
+        "yellows": 31
+    },
+    "Ringkøbing-Skjern Kommune": {
+        "color": 113.15436241610739,
+        "greens": 1065,
+        "reds": 9,
+        "yellows": 118
+    },
+    "Norddjurs Kommune": {
+        "color": 114.50261780104712,
+        "greens": 696,
+        "reds": 2,
+        "yellows": 66
+    },
+    "Slagelse Kommune": {
+        "color": 100.16597510373444,
+        "greens": 502,
+        "reds": 18,
+        "yellows": 203
+    },
+    "Egedal Kommune": {
+        "color": 68.60986547085201,
+        "greens": 55,
+        "reds": 23,
+        "yellows": 145
+    },
+    "Tønder Kommune": {
+        "color": 116.65071770334929,
+        "greens": 597,
+        "reds": 5,
+        "yellows": 25
+    },
+    "Favrskov Kommune": {
+        "color": 92.5984251968504,
+        "greens": 218,
+        "reds": 11,
+        "yellows": 152
+    },
+    "Frederikssund Kommune": {
+        "color": 99.22131147540983,
+        "greens": 338,
+        "reds": 19,
+        "yellows": 131
+    },
+    "Ærø Kommune": {
+        "color": 114.44444444444444,
+        "greens": 98,
+        "reds": 0,
+        "yellows": 10
+    },
+    "Ringsted Kommune": {
+        "color": 74.11764705882354,
+        "greens": 61,
+        "reds": 13,
+        "yellows": 130
+    },
+    "Aalborg Kommune": {
+        "color": 97.59581881533101,
+        "greens": 1159,
+        "reds": 80,
+        "yellows": 483
+    },
+    "Frederiksberg Kommune": {
+        "color": 63.89423076923077,
+        "greens": 148,
+        "reds": 121,
+        "yellows": 147
+    },
+    "Mariagerfjord Kommune": {
+        "color": 113.5232383808096,
+        "greens": 604,
+        "reds": 9,
+        "yellows": 54
+    },
+    "Morsø Kommune": {
+        "color": 112.01298701298701,
+        "greens": 271,
+        "reds": 4,
+        "yellows": 33
+    },
+    "Hjørring Kommune": {
+        "color": 106.27368421052631,
+        "greens": 1116,
+        "reds": 17,
+        "yellows": 292
+    },
+    "Bornholms Regionskommune": {
+        "color": 115.456570155902,
+        "greens": 418,
+        "reds": 3,
+        "yellows": 28
+    },
+    "Billund Kommune": {
+        "color": 111.08108108108108,
+        "greens": 190,
+        "reds": 1,
+        "yellows": 31
+    },
+    "Tårnby Kommune": {
+        "color": 66.23376623376623,
+        "greens": 32,
+        "reds": 16,
+        "yellows": 106
+    },
+    "Helsingør Kommune": {
+        "color": 61.737649063032364,
+        "greens": 176,
+        "reds": 159,
+        "yellows": 252
+    },
+    "Herlev Kommune": {
+        "color": 63.24324324324324,
+        "greens": 11,
+        "reds": 7,
+        "yellows": 56
+    },
+    "Vesthimmerlands Kommune": {
+        "color": 118.125,
+        "greens": 653,
+        "reds": 2,
+        "yellows": 17
+    },
+    "Kalundborg Kommune": {
+        "color": 107.81163434903047,
+        "greens": 882,
+        "reds": 19,
+        "yellows": 182
+    },
+    "Viborg Kommune": {
+        "color": 97.67790262172285,
+        "greens": 536,
+        "reds": 33,
+        "yellows": 232
+    },
+    "Hvidovre Kommune": {
+        "color": 63.1578947368421,
+        "greens": 26,
+        "reds": 19,
+        "yellows": 88
+    },
+    "Fredericia Kommune": {
+        "color": 89.91253644314868,
+        "greens": 199,
+        "reds": 28,
+        "yellows": 116
+    },
+    "Sønderborg Kommune": {
+        "color": 111.47679324894514,
+        "greens": 616,
+        "reds": 6,
+        "yellows": 89
+    },
+    "Rødovre Kommune": {
+        "color": 64.34210526315789,
+        "greens": 39,
+        "reds": 28,
+        "yellows": 85
+    },
+    "Brønderslev Kommune": {
+        "color": 102.01405152224824,
+        "greens": 305,
+        "reds": 6,
+        "yellows": 116
+    },
+    "Holbæk Kommune": {
+        "color": 88.52054794520548,
+        "greens": 382,
+        "reds": 35,
+        "yellows": 313
+    },
+    "Odense Kommune": {
+        "color": 77.88990825688073,
+        "greens": 347,
+        "reds": 87,
+        "yellows": 438
+    },
+    "Roskilde Kommune": {
+        "color": 57.18969555035129,
+        "greens": 76,
+        "reds": 96,
+        "yellows": 255
+    },
+    "Silkeborg Kommune": {
+        "color": 84.74611398963731,
+        "greens": 485,
+        "reds": 87,
+        "yellows": 393
+    },
+    "Rebild Kommune": {
+        "color": 112.6890756302521,
+        "greens": 212,
+        "reds": 3,
+        "yellows": 23
+    },
+    "Odsherred Kommune": {
+        "color": 105.85714285714286,
+        "greens": 770,
+        "reds": 21,
+        "yellows": 189
+    },
+    "Køge Kommune": {
+        "color": 61.56657963446475,
+        "greens": 72,
+        "reds": 62,
+        "yellows": 249
+    },
+    "Gribskov Kommune": {
+        "color": 91.4859437751004,
+        "greens": 468,
+        "reds": 76,
+        "yellows": 203
+    },
+    "Fredensborg Kommune": {
+        "color": 58.372093023255815,
+        "greens": 64,
+        "reds": 71,
+        "yellows": 123
+    },
+    "Solrød Kommune": {
+        "color": 50.12658227848101,
+        "greens": 18,
+        "reds": 44,
+        "yellows": 96
+    },
+    "Allerød Kommune": {
+        "color": 63.02521008403362,
+        "greens": 22,
+        "reds": 16,
+        "yellows": 81
+    },
+    "Thisted Kommune": {
+        "color": 111.60550458715596,
+        "greens": 755,
+        "reds": 5,
+        "yellows": 112
+    },
+    "Sorø Kommune": {
+        "color": 85.90405904059041,
+        "greens": 128,
+        "reds": 11,
+        "yellows": 132
+    },
+    "Lejre Kommune": {
+        "color": 79.06137184115524,
+        "greens": 106,
+        "reds": 18,
+        "yellows": 153
+    },
+    "Hedensted Kommune": {
+        "color": 103.16129032258064,
+        "greens": 465,
+        "reds": 19,
+        "yellows": 136
+    },
+    "Rudersdal Kommune": {
+        "color": 30.717131474103585,
+        "greens": 62,
+        "reds": 307,
+        "yellows": 133
+    },
+    "Dragør Kommune": {
+        "color": 31.57894736842105,
+        "greens": 3,
+        "reds": 66,
+        "yellows": 64
+    },
+    "Gladsaxe Kommune": {
+        "color": 69.88764044943821,
+        "greens": 102,
+        "reds": 58,
+        "yellows": 107
+    },
+    "Vordingborg Kommune": {
+        "color": 105.65217391304348,
+        "greens": 533,
+        "reds": 8,
+        "yellows": 149
+    },
+    "Gentofte Kommune": {
+        "color": 34.58181818181818,
+        "greens": 116,
+        "reds": 349,
+        "yellows": 85
+    },
+    "Vejle Kommune": {
+        "color": 95.88591184096802,
+        "greens": 765,
+        "reds": 73,
+        "yellows": 319
+    },
+    "Samsø Kommune": {
+        "color": 104.86486486486487,
+        "greens": 88,
+        "reds": 5,
+        "yellows": 18
+    },
+    "Brøndby Kommune": {
+        "color": 65.26315789473684,
+        "greens": 11,
+        "reds": 6,
+        "yellows": 40
+    },
+    "Assens Kommune": {
+        "color": 105.59633027522936,
+        "greens": 502,
+        "reds": 5,
+        "yellows": 147
+    },
+    "Langeland Kommune": {
+        "color": 110.78891257995735,
+        "greens": 399,
+        "reds": 2,
+        "yellows": 68
+    },
+    "Horsens Kommune": {
+        "color": 95.20588235294117,
+        "greens": 428,
+        "reds": 29,
+        "yellows": 223
+    },
+    "Næstved Kommune": {
+        "color": 99.02654867256638,
+        "greens": 454,
+        "reds": 13,
+        "yellows": 211
+    },
+    "Middelfart Kommune": {
+        "color": 95.26717557251908,
+        "greens": 329,
+        "reds": 21,
+        "yellows": 174
+    },
+    "Greve Kommune": {
+        "color": 55.13513513513514,
+        "greens": 11,
+        "reds": 29,
+        "yellows": 182
+    },
+    "Herning Kommune": {
+        "color": 97.29729729729729,
+        "greens": 391,
+        "reds": 23,
+        "yellows": 178
+    },
+    "Furesø Kommune": {
+        "color": 47.61904761904762,
+        "greens": 24,
+        "reds": 63,
+        "yellows": 102
+    },
+    "Kolding Kommune": {
+        "color": 94.23312883435582,
+        "greens": 515,
+        "reds": 50,
+        "yellows": 250
+    },
+    "Nordfyns Kommune": {
+        "color": 105.40106951871658,
+        "greens": 288,
+        "reds": 5,
+        "yellows": 81
+    },
+    "Ishøj Kommune": {
+        "color": 79.77272727272727,
+        "greens": 36,
+        "reds": 7,
+        "yellows": 45
+    },
+    "Lemvig Kommune": {
+        "color": 116.88679245283019,
+        "greens": 402,
+        "reds": 0,
+        "yellows": 22
+    },
+    "Faaborg-Midtfyn Kommune": {
+        "color": 104.70764617691154,
+        "greens": 509,
+        "reds": 12,
+        "yellows": 146
+    },
+    "Lyngby-Taarbæk Kommune": {
+        "color": 47.732342007434944,
+        "greens": 73,
+        "reds": 128,
+        "yellows": 68
+    },
+    "Hørsholm Kommune": {
+        "color": 36.32286995515695,
+        "greens": 30,
+        "reds": 118,
+        "yellows": 75
+    },
+    "Aarhus Kommune": {
+        "color": 70.24557395773843,
+        "greens": 599,
+        "reds": 300,
+        "yellows": 852
+    },
+    "Fanø Kommune": {
+        "color": 104.38356164383562,
+        "greens": 111,
+        "reds": 3,
+        "yellows": 32
+    },
+    "Struer Kommune": {
+        "color": 114.31279620853081,
+        "greens": 383,
+        "reds": 1,
+        "yellows": 38
+    },
+    "Nyborg Kommune": {
+        "color": 96.17647058823529,
+        "greens": 177,
+        "reds": 13,
+        "yellows": 82
+    },
+    "Randers Kommune": {
+        "color": 98.13025210084034,
+        "greens": 627,
+        "reds": 22,
+        "yellows": 303
+    },
+    "Høje-Taastrup Kommune": {
+        "color": 85.40322580645162,
+        "greens": 113,
+        "reds": 8,
+        "yellows": 127
+    },
+    "Haderslev Kommune": {
+        "color": 103.41463414634147,
+        "greens": 459,
+        "reds": 14,
+        "yellows": 142
+    },
+    "Københavns Kommune": {
+        "color": 63.191489361702125,
+        "greens": 800,
+        "reds": 680,
+        "yellows": 776
+    },
+    "Holstebro Kommune": {
+        "color": 105.89781021897811,
+        "greens": 537,
+        "reds": 13,
+        "yellows": 135
+    },
+    "Skanderborg Kommune": {
+        "color": 72.28628230616302,
+        "greens": 168,
+        "reds": 65,
+        "yellows": 270
+    },
+    "Frederikshavn Kommune": {
+        "color": 97.9871912168344,
+        "greens": 765,
+        "reds": 73,
+        "yellows": 255
+    },
+    "Varde Kommune": {
+        "color": 107.46355685131195,
+        "greens": 829,
+        "reds": 15,
+        "yellows": 185
+    },
+    "Albertslund Kommune": {
+        "color": 74.48275862068965,
+        "greens": 15,
+        "reds": 1,
+        "yellows": 42
+    },
+    "Aabenraa Kommune": {
+        "color": 108.09430255402751,
+        "greens": 421,
+        "reds": 13,
+        "yellows": 75
+    },
+    "Guldborgsund Kommune": {
+        "color": 110.63464837049743,
+        "greens": 995,
+        "reds": 11,
+        "yellows": 160
+    },
+    "Faxe Kommune": {
+        "color": 83.18181818181819,
+        "greens": 144,
+        "reds": 8,
+        "yellows": 200
+    },
+    "Ikast-Brande Kommune": {
+        "color": 109.13513513513513,
+        "greens": 309,
+        "reds": 6,
+        "yellows": 55
+    },
+    "Vejen Kommune": {
+        "color": 111.96850393700787,
+        "greens": 333,
+        "reds": 3,
+        "yellows": 45
+    },
+    "Glostrup Kommune": {
+        "color": 81.12676056338029,
+        "greens": 30,
+        "reds": 5,
+        "yellows": 36
+    },
+    "Ballerup Kommune": {
+        "color": 55.80419580419581,
+        "greens": 13,
+        "reds": 23,
+        "yellows": 107
+    },
+    "Syddjurs Kommune": {
+        "color": 99.19686581782567,
+        "greens": 708,
+        "reds": 41,
+        "yellows": 272
+    },
+    "Odder Kommune": {
+        "color": 91.78683385579937,
+        "greens": 181,
+        "reds": 12,
+        "yellows": 126
+    },
+    "Jammerbugt Kommune": {
+        "color": 116.27184466019418,
+        "greens": 967,
+        "reds": 1,
+        "yellows": 62
+    }
 }

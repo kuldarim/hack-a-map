@@ -49,10 +49,10 @@ function processPoints(geometry: any, callback: any, thisArg: any) {
   }
 }
 
-const setStyle = (map: google.maps.Map, colors: any) => {
+const setStyle = (map: google.maps.Map, areas: any) => {
   map.data.setStyle(feature => {
     const name = feature.getProperty("n") || feature.getProperty("name");
-    const hue = colors[name];
+    const hue = areas[name].color;
     const color = hue
       ? Color()
         .hue(hue)
@@ -68,13 +68,13 @@ const setStyle = (map: google.maps.Map, colors: any) => {
   });
 };
 
-const mouseOver = (map: google.maps.Map, colors: any) => (e: any) => {
+const mouseOver = (map: google.maps.Map, areas: any) => (e: any) => {
   map.data.revertStyle();
   map.data.overrideStyle(e.feature, { fillOpacity: 1 });
 
   // update the label
   const name = e.feature.getProperty("n") || e.feature.getProperty("name");
-  const hue = colors[name];
+  const hue = areas[name].color;
   (document.getElementById("data-label") as HTMLElement).textContent = name;
   (document.getElementById("data-caret") as HTMLElement).style.paddingLeft =
     (hue / 120) * 100 + "%";

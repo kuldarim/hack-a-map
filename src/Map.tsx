@@ -4,7 +4,8 @@ import * as React from "react";
 import initialAreaColors from "./colors/colors-initial";
 import zoomedAreaColors from "./colors/colors-zoomed";
 
-import allPoints from "./points/margarita_all";
+// tslint:disable-next-line
+const allPoints = require("./points/margarita_all.json");
 
 console.log(allPoints);
 
@@ -49,11 +50,13 @@ const setStyle = (map: google.maps.Map, colors: any) => {
   map.data.setStyle(feature => {
     const name = feature.getProperty("n") || feature.getProperty("name");
     const hue = colors[name];
-    const color = Color()
-      .hue(hue)
-      .saturationl(100)
-      .lightness(50)
-      .string();
+    const color = hue
+      ? Color()
+        .hue(hue)
+        .saturationl(100 - hue * 0.125)
+        .lightness(47)
+        .string()
+      : 'rgb(120, 120, 120)'
     return {
       fillColor: color,
       strokeWeight: 1,

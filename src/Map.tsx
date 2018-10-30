@@ -1,12 +1,6 @@
 import * as Color from "color";
 import * as GoogleMapsLoader from "google-maps";
 import * as React from "react";
-import initialAreaColors from "./colors/colors-initial";
-import zoomedAreaColors from "./colors/colors-zoomed";
-
-import allPoints from "./points/margarita_all";
-
-console.log(allPoints);
 
 const DefaultCenter = { lat: 56.263, lng: 9.501 };
 const mapElement = document.getElementById("map");
@@ -32,6 +26,16 @@ interface IPoint {
   affordability: number;
   municipality: string;
 }
+
+function getData(budget: string | null) {
+  return {
+    allPoints: require(`./data/${budget || 1}/all-points.json`),
+    zoomed: require(`./data/${budget || 1}/zoomed.json`),
+    initial: require(`./data/${budget || 1}/initial.json`),
+  }
+}
+
+
 
 function processPoints(geometry: any, callback: any, thisArg: any) {
   if (geometry instanceof google.maps.LatLng) {
@@ -79,15 +83,18 @@ const loadMaps = (center: ICoordinates) => {
   GoogleMapsLoader.load(google => {
     const map = new google.maps.Map(mapElement, {
       center,
-      zoom: 7
+      zoom: 7,
+      mapTypeControl: false,
     });
+    const budget = new URLSearchParams(window.location.search).get("budget");
+    const data = getData(budget);
 
     map.data.loadGeoJson(initialGeo);
-    setStyle(map, initialAreaColors);
+    setStyle(map, data.initial);
 
     const listener = map.data.addListener(
       "mouseover",
-      mouseOver(map, initialAreaColors)
+      mouseOver(map, data.initial)
     );
 
     map.data.addListener("click", event => {
@@ -102,10 +109,10 @@ const loadMaps = (center: ICoordinates) => {
         setTimeout(() => {
           map.data.forEach(feature => map.data.remove(feature));
           map.data.loadGeoJson(zoomedGeo);
-          setStyle(map, zoomedAreaColors);
+          setStyle(map, data.zoomed);
           listener.remove();
 
-          map.data.addListener("mouseover", mouseOver(map, zoomedAreaColors));
+          map.data.addListener("mouseover", mouseOver(map, data.zoomed));
         }, 10);
       } else if (currentZoom <= 9) {
         // second zoom
@@ -115,7 +122,7 @@ const loadMaps = (center: ICoordinates) => {
         const name =
           event.feature.getProperty("n") || event.feature.getProperty("name");
 
-        const municipalityPoints = (allPoints as IPoint[]).filter(
+        const municipalityPoints = (data.allPoints as IPoint[]).filter(
           (p: IPoint) => p.municipality === name
         );
         municipalityPoints.map((p: IPoint) => {

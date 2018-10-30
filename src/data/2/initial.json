@@ -1,11 +1,56 @@
 {
-  "Nordjylland": 106.87601957585645,
-  "København og Omegn": 61.10769230769231,
-  "Nordsjælland": 70.50248481501933,
-  "Bornholm": 115.42600896860986,
-  "Sjælland": 95.66538918990352,
-  "Fyn": 96.10748002904866,
-  "Sydjylland": 103.98063474986552,
-  "Østjylland": 90.8182338355903,
-  "Vestjylland": 104.77653631284916
+  "Nordjylland": {
+    "color": 106.87601957585645,
+    "greens": 5923,
+    "yellows": 1257,
+    "reds": 176
+  },
+  "København og Omegn": {
+    "color": 61.10769230769231,
+    "greens": 1421,
+    "yellows": 1792,
+    "reds": 1337
+  },
+  "Nordsjælland": {
+    "color": 70.50248481501933,
+    "greens": 1462,
+    "yellows": 1332,
+    "reds": 828
+  },
+  "Bornholm": {
+    "color": 115.42600896860986,
+    "greens": 415,
+    "yellows": 28,
+    "reds": 3
+  },
+  "Sjælland": {
+    "color": 95.66538918990352,
+    "greens": 4836,
+    "yellows": 2393,
+    "reds": 338
+  },
+  "Fyn": {
+    "color": 96.10748002904866,
+    "greens": 2664,
+    "yellows": 1289,
+    "reds": 178
+  },
+  "Sydjylland": {
+    "color": 103.98063474986552,
+    "greens": 4260,
+    "yellows": 1145,
+    "reds": 172
+  },
+  "Østjylland": {
+    "color": 90.8182338355903,
+    "greens": 3074,
+    "yellows": 1788,
+    "reds": 381
+  },
+  "Vestjylland": {
+    "color": 104.77653631284916,
+    "greens": 3333,
+    "yellows": 836,
+    "reds": 127
+  }
 }

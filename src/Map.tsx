@@ -4,6 +4,10 @@ import * as React from "react";
 import initialAreaColors from "./colors/colors-initial";
 import zoomedAreaColors from "./colors/colors-zoomed";
 
+import allPoints from "./points/margarita_all";
+
+console.log(allPoints);
+
 const DefaultCenter = { lat: 56.263, lng: 9.501 };
 const mapElement = document.getElementById("map");
 
@@ -18,6 +22,15 @@ const zoomedGeo =
 interface ICoordinates {
   lat: number;
   lng: number;
+}
+
+interface IPoint {
+  id: string;
+  lon: number;
+  lan: number;
+  color: "Red" | "Green" | "Yellow";
+  affordability: number;
+  municipality: string;
 }
 
 function processPoints(geometry: any, callback: any, thisArg: any) {
@@ -80,16 +93,42 @@ const loadMaps = (center: ICoordinates) => {
     map.data.addListener("click", event => {
       const bounds = new google.maps.LatLngBounds();
       processPoints(event.feature.getGeometry(), bounds.extend, bounds);
-      map.fitBounds(bounds);
-      map.setZoom(9);
-      setTimeout(() => {
-        map.data.forEach(feature => map.data.remove(feature));
-        map.data.loadGeoJson(zoomedGeo);
-        setStyle(map, zoomedAreaColors);
-        listener.remove();
 
-        map.data.addListener("mouseover", mouseOver(map, zoomedAreaColors));
-      }, 10);
+      const currentZoom = map.getZoom();
+      // first zooom
+      if (currentZoom <= 7) {
+        map.fitBounds(bounds);
+        map.setZoom(9);
+        setTimeout(() => {
+          map.data.forEach(feature => map.data.remove(feature));
+          map.data.loadGeoJson(zoomedGeo);
+          setStyle(map, zoomedAreaColors);
+          listener.remove();
+
+          map.data.addListener("mouseover", mouseOver(map, zoomedAreaColors));
+        }, 10);
+      } else if (currentZoom <= 9) {
+        // second zoom
+        map.fitBounds(bounds);
+        map.setZoom(12);
+        console.log(event);
+        const name =
+          event.feature.getProperty("n") || event.feature.getProperty("name");
+
+        const municipalityPoints = (allPoints as IPoint[]).filter(
+          (p: IPoint) => p.municipality === name
+        );
+        municipalityPoints.map((p: IPoint) => {
+          return new google.maps.Marker({
+            position: { lat: Number(p.lan), lng: Number(p.lon) },
+            icon: `/${p.color}.png`,
+            map
+          });
+        });
+        setTimeout(() => {
+          map.data.forEach(feature => map.data.remove(feature));
+        });
+      }
     });
   });
 };

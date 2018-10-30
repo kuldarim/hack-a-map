@@ -31,11 +31,9 @@ function getData(budget: string | null) {
   return {
     allPoints: require(`./data/${budget || 1}/all-points.json`),
     zoomed: require(`./data/${budget || 1}/zoomed.json`),
-    initial: require(`./data/${budget || 1}/initial.json`),
-  }
+    initial: require(`./data/${budget || 1}/initial.json`)
+  };
 }
-
-
 
 function processPoints(geometry: any, callback: any, thisArg: any) {
   if (geometry instanceof google.maps.LatLng) {
@@ -55,11 +53,10 @@ const setStyle = (map: google.maps.Map, areas: any) => {
     const hue = areas[name].color;
     const color = hue
       ? Color()
-        .hue(hue)
-        .saturationl(100 - hue * 0.125)
-        .lightness(45)
-
-      : Color('rgb(120, 120, 120)')
+          .hue(hue)
+          .saturationl(100 - hue * 0.125)
+          .lightness(45)
+      : Color("rgb(120, 120, 120)");
     return {
       fillColor: color.string(),
       strokeWeight: 1,
@@ -75,11 +72,27 @@ const mouseOver = (map: google.maps.Map, areas: any) => (e: any) => {
 
   // update the label
   const name = e.feature.getProperty("n") || e.feature.getProperty("name");
+  const greens = areas[name].greens;
+  const reds = areas[name].reds;
+  const yellows = areas[name].yellows;
+  console.log(areas[name]);
+  console.log(greens, reds, yellows);
   const hue = areas[name].color;
   (document.getElementById("data-label") as HTMLElement).textContent = name;
   (document.getElementById("data-caret") as HTMLElement).style.paddingLeft =
     (hue / 120) * 100 + "%";
   (document.getElementById("data-box") as HTMLElement).style.display = "block";
+  (document.getElementById("affordability-box") as HTMLElement).style.display =
+    "block";
+  (document.getElementById(
+    "green"
+  ) as HTMLElement).textContent = `Affordable homes: ${greens}`;
+  (document.getElementById(
+    "yellow"
+  ) as HTMLElement).textContent = `Risky: ${yellows}`;
+  (document.getElementById(
+    "red"
+  ) as HTMLElement).textContent = `Not affordable homes: ${reds}`;
 };
 
 const loadMaps = (center: ICoordinates) => {
@@ -87,7 +100,7 @@ const loadMaps = (center: ICoordinates) => {
     const map = new google.maps.Map(mapElement, {
       center,
       zoom: 7,
-      mapTypeControl: false,
+      mapTypeControl: false
     });
     const budget = new URLSearchParams(window.location.search).get("budget");
     const data = getData(budget);

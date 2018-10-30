@@ -47,6 +47,14 @@ body {
   line-height: 28px;
   display: none;
 }
+#affordability-box {
+  text-align: left;
+  bottom: 60px;
+  left: 110px;
+  height: 80px;
+  line-height: 28px;
+  display: none;
+}
 #census-variable {
   width: 360px;
   height: 20px;
